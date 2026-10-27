@@ -35,4 +35,11 @@ neste plugin. Cada projeto guarda a config e o conhecimento em `<repo>/.megabrai
 
 ### Atualizar
 
-`/plugin marketplace update dev10` e depois `/reload-plugins`.
+No terminal (dentro da sessão, `/plugin update` só abre a lista de plugins):
+
+```
+claude plugin marketplace update dev10
+claude plugin update megabrain@dev10
+```
+
+Depois abra uma sessão nova (ou rode `/reload-plugins`).
