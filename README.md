@@ -25,6 +25,7 @@ Depois `/reload-plugins`. Num projeto novo, rode `/megabrain:init` uma vez.
 | --- | --- |
 | `/megabrain:card <link do card>` | Checkpoint "nas minhas palavras", playbook, implementação, prova dirigindo as superfícies e link de criação do PR. |
 | `/megabrain:init` | Prepara o projeto: `.megabrain/config.json` e a base vazia. |
+| `/megabrain:tech-decisions <link do card>` | Curadoria antes do dev: fecha as regras duvidosas e as decisões técnicas do card e anexa o documento de decisões ao card. |
 | `/megabrain:help` | Os comandos, os playbooks e os scripts; num projeto com `.megabrain/`, também as superfícies e os comandos de cada uma. |
 
 ### Onde fica cada coisa

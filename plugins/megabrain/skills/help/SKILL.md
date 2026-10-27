@@ -1,6 +1,6 @@
 ---
 name: help
-description: "Cartão de referência da megabrain: as skills (`/megabrain:init`, `/megabrain:card`, `/megabrain:help`), os playbooks do card, os scripts (`boot.mjs`, `control.mjs`, `blast-radius`), a configuração e, num projeto com `.megabrain/`, as superfícies e os comandos de cada uma. Use com `/megabrain:help`, ou quando perguntarem como usar a megabrain, que comandos ela tem ou por onde começar."
+description: "Cartão de referência da megabrain: as skills (`/megabrain:init`, `/megabrain:card`, `/megabrain:tech-decisions`, `/megabrain:help`), os playbooks do card, os scripts (`boot.mjs`, `control.mjs`, `blast-radius`), a configuração e, num projeto com `.megabrain/`, as superfícies e os comandos de cada uma. Use com `/megabrain:help`, ou quando perguntarem como usar a megabrain, que comandos ela tem ou por onde começar."
 ---
 
 # megabrain — ajuda
@@ -14,6 +14,7 @@ Responda na língua do usuário. Mostre as seções nesta ordem; a única que ro
 |---|---|---|
 | **init** | `/megabrain:init` | Prepara o repositório: lê o código, propõe `.megabrain/config.json` (superfícies, portas, banco, migrations, credencial da seed, runtime do app mobile) e cria a base vazia. Uma vez por projeto. |
 | **card** | `/megabrain:card <link do card>` | Do card do ClickUp ao PR: diz nas próprias palavras o que vai fazer e espera o OK (o único checkpoint), implementa, prova no sistema rodando e entrega o link de criação do PR. |
+| **tech-decisions** | `/megabrain:tech-decisions <link do card>` | Antes do dev pegar o card: fecha as regras de negócio duvidosas e as decisões técnicas nebulosas, ancoradas no código, nos fluxos e no histórico, e anexa o documento de decisões ao card. Não implementa. |
 | **help** | `/megabrain:help` | Este cartão. |
 
 ## Playbooks do card
