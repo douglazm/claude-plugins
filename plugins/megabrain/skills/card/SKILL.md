@@ -67,7 +67,7 @@ proponha o caminho curto. Depois do OK, siga até a entrega sem pedir licença d
 | comportamento novo ou mudado, com critério de aceite ou análise técnica | `${CLAUDE_PLUGIN_ROOT}/skills/card/references/playbooks/feature.md` |
 | tem "Decidir com protótipo", ou a resposta só aparece vendo rodar | `${CLAUDE_PLUGIN_ROOT}/skills/card/references/playbooks/prototype.md` |
 | mexe em contrato (API/SDK/types) e em app, ou o TL;DR tem várias áreas | `${CLAUDE_PLUGIN_ROOT}/skills/card/references/playbooks/multi-pr.md` |
-| "por que isso é assim?", ou um bug que pode ser regra mudada de propósito | `${CLAUDE_PLUGIN_ROOT}/skills/card/references/playbooks/why.md` |
+| "por que isso é assim?", ou um bug que pode ser regra mudada de propósito | `${CLAUDE_PLUGIN_ROOT}/skills/why/SKILL.md` (o método do `/megabrain:why`) |
 | área sem fluxo que vai voltar a ser mexida | `.megabrain/flows/README.md` ("Como mapear") e `${CLAUDE_PLUGIN_ROOT}/skills/card/references/flow-contract.md` |
 
 Leia **só** o playbook escolhido. Um card pode encadear dois (bug → why; feature →
@@ -213,6 +213,7 @@ que não existe nesta máquina, vê nada acontecer e conclui errado.
 | Arquivo | Quando ler |
 |---|---|
 | `${CLAUDE_PLUGIN_ROOT}/skills/card/references/playbooks/*.md` | o escolhido no roteador (§3), só ele |
+| `${CLAUDE_PLUGIN_ROOT}/skills/card/references/free-text.md` | quando a entrada veio por `/megabrain:bug`, `:feature`, `:prototype`, `:multi-pr` ou `:map`, sem card |
 | `${CLAUDE_PLUGIN_ROOT}/skills/card/references/flow-contract.md` | ao escrever ou corrigir um fluxo |
 | `${CLAUDE_PLUGIN_ROOT}/skills/card/references/feature-contract.md` | ao escrever ou corrigir uma feature |
 | `.megabrain/README.md` | **sempre**, antes do §2 |
