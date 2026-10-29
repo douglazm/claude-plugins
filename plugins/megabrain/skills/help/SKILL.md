@@ -78,6 +78,7 @@ Marketplaces › dev10 › Enable auto-update.
 1. `/megabrain:init`, se o projeto ainda não tem `.megabrain/`.
 2. `control.mjs <superfície> doctor`, para ver se o ambiente está pronto.
 3. `/megabrain:card <link do card>`, ou o comando do playbook com texto livre.
+4. Só quer entender, sem mudar código: `/megabrain:how`, `/megabrain:why` ou `/megabrain:teach`.
 
 ## Mais
 
