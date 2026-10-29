@@ -10,8 +10,9 @@ o "defeito" da NFC-e lido no código não existia).
 
 1. **Do sintoma ao arquivo.** O card diz a tela e o passo. Ache o arquivo suspeito pela
    rota da tela (`.megabrain/surfaces/` e `.megabrain/features/`) ou pelo texto da mensagem de erro (`grep`).
-2. **Defeito ou regra que mudou?** Antes de "consertar", rode o `why.md` no trecho
-   suspeito: se um PR recente mudou isso de propósito, o card é pedido de produto, não
+2. **Defeito ou regra que mudou?** Antes de "consertar", rode o método do
+   `${CLAUDE_PLUGIN_ROOT}/skills/why/SKILL.md` no trecho suspeito, estreito (git, PR e card
+   bastam): se um PR recente mudou isso de propósito, o card é pedido de produto, não
    bug — pare e diga (é decisão de produto, §3 da SKILL).
 3. **Raio do suspeito:** `blast-radius --files <arquivo>` diz o que subir e qual fluxo ler.
    Leia o fluxo, pré-condições primeiro: é onde as tentativas morrem. Mapa de código é

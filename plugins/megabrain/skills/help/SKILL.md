@@ -1,6 +1,6 @@
 ---
 name: help
-description: "Cartão de referência da megabrain: as skills (`/megabrain:init`, `/megabrain:card`, `/megabrain:tech-decisions`, `/megabrain:help`), os playbooks do card, os scripts (`boot.mjs`, `control.mjs`, `blast-radius`), a configuração e, num projeto com `.megabrain/`, as superfícies e os comandos de cada uma. Use com `/megabrain:help`, ou quando perguntarem como usar a megabrain, que comandos ela tem ou por onde começar."
+description: "Cartão de referência da megabrain: as skills (`/megabrain:init`, `/megabrain:card`, os comandos de texto livre `bug`, `feature`, `prototype`, `multi-pr`, `map`, `why`, `how`, `teach`, `/megabrain:tech-decisions`, `/megabrain:help`), os playbooks do card, os scripts (`boot.mjs`, `control.mjs`, `blast-radius`), a configuração e, num projeto com `.megabrain/`, as superfícies e os comandos de cada uma. Use com `/megabrain:help`, ou quando perguntarem como usar a megabrain, que comandos ela tem ou por onde começar."
 ---
 
 # megabrain — ajuda
@@ -17,18 +17,23 @@ Responda na língua do usuário. Mostre as seções nesta ordem; a única que ro
 | **tech-decisions** | `/megabrain:tech-decisions <link do card>` | Antes do dev pegar o card: fecha as regras de negócio duvidosas e as decisões técnicas nebulosas, ancoradas no código, nos fluxos e no histórico, e anexa o documento de decisões ao card. Não implementa. |
 | **help** | `/megabrain:help` | Este cartão. |
 
-## Playbooks do card
+## Sem card: texto livre
 
-O `/megabrain:card` escolhe pelo tipo do card; dá para pedir um pelo nome.
+Cada playbook tem o seu comando. A entrada é o que você escreveria para um colega: um sintoma,
+um pedido, uma thread colada, uma pergunta. Com link de card no texto, ele é lido também.
 
-| Playbook | Quando |
-|---|---|
-| `bug` | defeito, comportamento errado, "não funciona" |
-| `feature` | comportamento novo ou mudado, com critério de aceite ou análise técnica |
-| `prototype` | "Decidir com protótipo", ou a resposta só aparece vendo rodar |
-| `multi-pr` | mexe em contrato (API/SDK/types) e em app, ou o TL;DR tem várias áreas |
-| `why` | "por que isso é assim?", ou um bug que pode ser regra mudada de propósito |
-| `map` | mapear o fluxo de uma área que vai voltar a ser mexida |
+| Comando | Quando | Entrega |
+|---|---|---|
+| `/megabrain:bug <sintoma>` | defeito, comportamento errado, "não funciona" | branch corrigida e provada, link do PR |
+| `/megabrain:feature <pedido>` | comportamento novo ou mudado | branch provada, link do PR |
+| `/megabrain:prototype <pergunta>` | a resposta só aparece vendo rodar | comparação das variantes e recomendação, sem PR |
+| `/megabrain:multi-pr <mudança>` | mexe em contrato (API/SDK/types) e em app | pilha de PRs, um link por PR |
+| `/megabrain:map <área>` | mapear o fluxo de uma área que vai voltar a ser mexida | fluxo em `.megabrain/flows/`, link do PR |
+| `/megabrain:why <pergunta>` | "por que isso é assim?" | resposta com fontes, fato separado de inferência; não muda código |
+| `/megabrain:how <pergunta>` | "como isso funciona?", "onde isso deveria ficar?" | modelo mental da área com `arquivo:linha`; não muda código |
+| `/megabrain:teach <pergunta>` | entender e confiar: uma área, uma mudança, "por que você fez assim e não X?" | explicação que junta o `how` e o `why`; não muda código |
+
+O `/megabrain:card` escolhe o mesmo playbook sozinho, pelo tipo do card.
 
 ## Scripts
 
@@ -72,7 +77,8 @@ Marketplaces › dev10 › Enable auto-update.
 
 1. `/megabrain:init`, se o projeto ainda não tem `.megabrain/`.
 2. `control.mjs <superfície> doctor`, para ver se o ambiente está pronto.
-3. `/megabrain:card <link do card>`.
+3. `/megabrain:card <link do card>`, ou o comando do playbook com texto livre.
+4. Só quer entender, sem mudar código: `/megabrain:how`, `/megabrain:why` ou `/megabrain:teach`.
 
 ## Mais
 
